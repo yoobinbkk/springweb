@@ -1,0 +1,5 @@
+package com.javassem.exeception;
+
+public class ExceptionHandler {
+
+}

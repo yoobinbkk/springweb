@@ -1,0 +1,50 @@
+package com.java.controller;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.java.domain.EmpVO;
+import com.java.service.EmpService;
+
+@Controller
+public class EmpController {
+	
+	@Autowired
+	private EmpService empService;
+	
+	@RequestMapping("empSelect.do")
+	public String test(Model m) {
+		List<EmpVO> list = empService.empSelect();
+		m.addAttribute("result", list);
+		return "empSelect";
+	}
+	
+	@RequestMapping("empDept.do")
+	public String test2(Model m) {
+		List<HashMap> result = empService.empDept();
+		m.addAttribute("result", result);
+		for(HashMap map : result) {
+			System.out.println(map);
+		}
+		return "empDept";
+	}
+	
+	/*	만약 콘솔로 출력하고 싶으면
+	*	 for(HashMap map : result) {
+			System.out.println(map);
+		}
+	*/
+	
+}
+
+/*
+ *	뷰페이지 지정 방식
+ *	1. ModelAndView 리턴
+ *	2. String 리턴
+ *	3. void인 경우 자동으로 요청명과 동일페이지 
+*/

@@ -1,0 +1,23 @@
+package com.java.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.java.domain.EmpVO;
+import com.java.service.EmpServiceImpl;
+
+@Controller
+public class EmpController {
+	
+	@Autowired
+	private EmpServiceImpl empService;
+	
+	@RequestMapping("empSelect.do")
+	public void test() {
+		List<EmpVO> list = empService.empSelect();
+	}
+	
+}

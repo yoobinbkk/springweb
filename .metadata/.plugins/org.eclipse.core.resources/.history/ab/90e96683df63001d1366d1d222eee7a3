@@ -1,0 +1,10 @@
+1. 프로젝트 생성
+	Spring Legacy Project > Spring MVC Project
+
+2. 라이브러리 추가 (pom.xml)
+
+3. 스프링 설정 / mybatis 설정
+	- servlet-context.xml
+	- root-context
+
+(WEB-INF/lib/ojdbc6.jar)

@@ -1,0 +1,11 @@
+package com.java.service;
+
+public class SampleServiceImpl implements SampleService {
+
+	@Override
+	public void getSample() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

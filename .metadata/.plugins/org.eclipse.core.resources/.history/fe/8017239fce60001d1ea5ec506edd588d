@@ -1,0 +1,14 @@
+package myclass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import myclass.model.MemberVO;
+
+@Controller
+public class ParameterController {
+	
+	@RequestMapping({"param", "paramForm"})
+	public void test(MemberVO vo) {}
+	
+}

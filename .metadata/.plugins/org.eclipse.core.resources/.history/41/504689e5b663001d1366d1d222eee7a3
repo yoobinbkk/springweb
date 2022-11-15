@@ -1,0 +1,18 @@
+package com.java.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.java.service.EmpServiceImpl;
+
+@Controller
+public class EmpController {
+	
+	private EmpServiceImpl empService;
+	
+	@RequestMapping("empSelect.do")
+	public void test() {
+		
+	}
+	
+}

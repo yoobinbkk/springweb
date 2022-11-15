@@ -1,0 +1,27 @@
+package com.javassem.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.web.context.WebApplicationContext;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration
+@ContextConfiguration({"file:src/main/webapp/WEB-INF/spring/appServlet-context.xml",
+					   "file:src/main/webapp/WEB-INF/spring/root-context.xml"})
+public class BoardControllerTest {
+	
+	private WebApplicationContext context;
+	
+	private MockMvc mockMock;	// Mock : 모조품(테스트를 하기 위한 모조품 구조)
+	
+	@Autowired
+	BoardController boardController;
+	
+	@Test
+	public void test() {
+		System.out.println("테스트확인");
+	}
+	
+}

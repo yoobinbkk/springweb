@@ -1,0 +1,12 @@
+package com.java.dao;
+
+public class SampleDAOImpl implements SampleDAO {
+
+	@Override
+	public void getSample() {
+		
+	}
+	
+	
+
+}

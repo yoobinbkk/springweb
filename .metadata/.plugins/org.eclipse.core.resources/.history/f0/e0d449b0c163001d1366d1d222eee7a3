@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>empDept</title>
+</head>
+<body>
+
+<h2>목록보기</h2>
+
+
+<table border="2">
+	<tr>
+		<td>사원번호</td>
+		<td>사원이름</td>
+		<td>부서</td>
+	</tr>
+	<c:forEach items="${result}" var="HashMap">
+	<tr>
+		<td>${HashMap.empno}</td>
+		<td>${HashMap.ename}</td>
+		<td>${HashMap.dname}</td>
+	</tr>
+	</c:forEach>
+</table>
+
+</body>
+</html>

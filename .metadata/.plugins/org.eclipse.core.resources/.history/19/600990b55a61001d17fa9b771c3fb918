@@ -1,0 +1,27 @@
+package myclass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller("/review")
+public class ReviewController {
+	
+	@RequestMapping("/modelandview.do")
+	public void test() {
+		// 1. ModelAndView 뷰페이지 지정
+		System.out.println("모델앤뷰 실행");
+	}
+	
+	@RequestMapping("/string.do")
+	public String test2() {
+		// 2. 문자열 리턴 뷰페이지 지정
+		return "string";
+	}
+	
+	@RequestMapping("/void.do")
+	public void test3() {
+		// 3.void 리턴 뷰페이지 지정
+		//	void면 requestMapping을 경로로 삼아서 
+	}
+	
+}

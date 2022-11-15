@@ -1,0 +1,12 @@
+package myclass.model;
+
+public class MemberVO {
+	
+	private String id;
+	private String name;
+	private int age;
+	
+	
+	
+	
+}

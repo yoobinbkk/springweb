@@ -1,0 +1,11 @@
+package com.java.dao;
+
+import java.util.List;
+
+import com.java.domain.EmpVO;
+
+public interface EmpDAO {
+	
+	List<EmpVO> empSelect();
+
+}

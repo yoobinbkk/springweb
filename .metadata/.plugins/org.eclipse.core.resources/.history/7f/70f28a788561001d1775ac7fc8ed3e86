@@ -1,0 +1,58 @@
+package com.javassem.controller;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.javassem.domain.BoardVO;
+import com.javassem.service.BoardService;
+
+@Controller
+public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
+	
+	@RequestMapping("getBoardList.do")
+	public void getBoardList(Model m) {
+		List<BoardVO> list = boardService.getBoardList();
+		m.addAttribute("boardList", list);
+	}
+	
+	
+	@RequestMapping("insertBoard.do")
+	public void insertBoard() {
+		
+	}
+	
+	
+	@RequestMapping("saveBoard.do")
+	public String saveBoard(BoardVO boardVO) {
+		boardService.insertBoard(boardVO);
+		return "redirect:getBoardList.do";
+	}
+	
+	// 오라클에서는 이제 막 작성한 게시글을 상세보기하지 못한다. seq를 넘겨줄 수 없어서
+	
+	
+	@RequestMapping("getBoard.do")
+	public void getBoard(Model m, BoardVO boardVO) {
+		BoardVO vo = boardService.getBoard(boardVO);
+		m.addAttribute("board", vo);
+	}
+	
+	// or m.addAttribute("board", boardService.getBoard(boardVO));
+	// or m.addAttribute("board", boardService.getBoard(seq));
+	
+	
+
+}
