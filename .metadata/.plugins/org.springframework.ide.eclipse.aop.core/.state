@@ -10,4 +10,5 @@
 <aop-project name="hSample"/>
 <aop-project name="gWebBoard1"/>
 <aop-project name="gWebBoardLS"/>
+<aop-project name="hRestBoard"/>
 </aop-reference-model>
