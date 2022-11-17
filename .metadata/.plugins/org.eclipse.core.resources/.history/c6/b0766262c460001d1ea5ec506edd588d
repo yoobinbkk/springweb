@@ -1,7 +1,0 @@
-package myclass.model;
-
-public class MemberVOList {
-	
-	List<MemberVO> list;
-	
-}
